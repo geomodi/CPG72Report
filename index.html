@@ -14,5 +14,24 @@
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
+  <script>
+    // Ensure images are loaded correctly
+    document.addEventListener('DOMContentLoaded', () => {
+      const logo = document.createElement('img');
+      logo.src = '.logo.png'; // Adjust this path
+      logo.alt = 'Cummins Performance Group Logo';
+      logo.style.height = '100px';
+
+      const rdp = document.createElement('img');
+      rdp.src = '.rdp.png'; // Adjust this path
+      rdp.alt = 'Real Deal Report';
+      rdp.style.height = '100px';
+      rdp.style.transform = 'rotate(-5deg)';
+
+      const header = document.querySelector('.header');
+      header.insertBefore(logo, header.firstChild);
+      header.appendChild(rdp);
+    });
+  </script>
 </body>
 </html>
